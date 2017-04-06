@@ -1,0 +1,43 @@
+p{
+  color:$gray;
+  font: #{$font-size-base+2}/#{$font-size-h2} $font-family-sans-serif;
+
+  &.text-of-graphic-line{
+    position: absolute;
+    width:80%;
+    left: -10%;
+    top:100px;
+    z-index: 2;
+    color:$brand-third;
+    font-size: $font-size-h3;
+  }
+  &.text-of-graphic-dots{
+    position: absolute;
+    width: 100%;
+    right: 15%;
+    top: 300px;
+    z-index: 2;
+    color:$brand-third;
+    font-size: $font-size-h3;
+  }
+
+  strong{
+    font-style: italic;
+    font-weight:600;
+  }
+}
+
+
+@media screen and (max-width: 990px){
+  p{
+    &.text-of-graphic-line, &.text-of-graphic-dots{
+      position:relative;
+      width:80%;
+      margin:20px 10%;
+      left:0;
+      right:0;
+      top:auto;
+      bottom: 0;
+    }
+  }
+}

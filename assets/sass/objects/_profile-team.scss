@@ -1,0 +1,116 @@
+.profile-team{
+  height:300px;
+  position:relative;
+  overflow: hidden;
+  margin:0 0 40px 0;
+  @include border-radius(10px);
+  .profile-team-social-cont{
+    position:absolute;
+    text-align: center;
+    bottom:0;
+    left:0;
+    right:0;
+    .profile-team-social{
+      text-align:center;
+      color:$body-bg;
+      font-size: $font-size-h3;
+      z-index:3;
+      position:relative;
+      padding: 20px;
+      .profile-team-btn{
+        left:0;
+        right:0;
+        a{
+          color:$body-bg;
+        }
+      }
+    }
+  }
+
+  .profile-team-social-cont{
+    display:block;
+    &:after{
+      content:'';
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      @include background-image(linear-gradient(to right, $brand-primary, $brand-third));
+      @include opacity(0.9);
+      z-index: 1;
+    }
+  }
+
+}
+
+// @media screen and (max-width:1280px){
+//   .profile-team{
+//     .profile-team-social-cont{
+//       .profile-team-social{
+//         top:50px;
+//         .profile-team-btn{
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media screen and (min-width:990px){
+  .profile-team{
+    .profile-team-social-cont{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      top:0;
+      display:none;
+      cursor:pointer;
+      text-align: center;
+      .profile-team-social{
+        position:absolute;
+        bottom:20px;
+        left:20px;
+        right:20px;
+        top:60px;
+        text-align:center;
+        color:$body-bg;
+        font-size: $font-size-h3;
+        z-index:3;
+        .profile-team-btn{
+          position:absolute;
+          bottom:20px;
+          left:0;
+          right:0;
+          a{
+            color:$body-bg;
+          }
+        }
+      }
+    }
+    &:hover{
+      .profile-team-social-cont{
+        display:block;
+        &:after{
+          content:'';
+          position:absolute;
+          left:0;
+          right:0;
+          top:0;
+          bottom:0;
+          @include background-image(linear-gradient(to right, $brand-primary, $brand-third));
+          @include opacity(0.9);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:990px){
+  .profile-team{
+    &.profile-empty{
+      display:none;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.btn{
+  text-align: left;
+  font-size:16px;
+  &.btn-primary{
+    background:transparent;
+    border:solid 1px $brand-secondary;
+    @include border-radius(10px);
+    color:$brand-secondary;
+    font-weight: 600;
+    text-align: center;
+    &:hover{
+      background:$brand-secondary;
+      color:$body-bg;
+    }
+    &.text-left{
+      text-align: left;
+    }
+  }
+  &.btn-default{
+    background:transparent;
+    border:none;
+    @include border-radius(10px);
+    color:$body-bg;
+    font-weight: 600;
+    text-align: center;
+    &:hover{
+      background:transparent;
+      text-decoration: underline;
+    }
+  }
+  &.btn-linear, &.navbar-toggle{
+    background:transparent;
+    border:solid 1px $body-bg;
+    @include border-radius(5px);
+    color:$body-bg;
+    font-weight: 600;
+    text-align: center;
+    &:hover{
+      background:$body-bg;
+      color:$brand-primary;
+      span, i{
+        color:$brand-primary;
+      }
+    }
+  }
+}
+
+button{
+  &.close{
+    margin: 0 20px 0 ;
+    color:$body-bg;
+    z-index: 10;
+    position: relative;
+    span{
+      color:$body-bg;
+      font-size:$font-size-h1;
+    }
+  }
+}

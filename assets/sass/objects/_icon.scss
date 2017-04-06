@@ -1,0 +1,10 @@
+.icon{
+  font-size:$font-size-h1/1.4;
+  padding:10px;
+  background: $brand-primary;
+  text-align:center;
+  color:$body-bg;
+  margin:0 0 10px 0;
+  display: inline-block;
+  @include border-radius(10px);
+}

@@ -1,0 +1,99 @@
+// Block of Line and Dots
+.block-subbrand{
+  position:relative;
+  .container{
+    z-index: 3;
+    position:relative;
+    h2{
+      font-size:$font-size-h2*1.5;
+      line-height: $font-size-h1;
+      font-weight: 300;
+      color:$body-bg;
+      strong{
+        font-weight: 600;
+      }
+    }
+    .btn{
+      border-color:$body-bg;
+      color:$body-bg;
+      &:hover{
+        background:$body-bg;
+        color:$brand-third;
+      }
+    }
+  }
+}
+
+// Block program
+.block-program{
+  position:relative;
+  .container{
+    z-index: 3;
+    position:relative;
+    h2{
+      color:$brand-secondary;
+      font-size:$font-size-h2*1.5;
+      line-height: $font-size-h1;
+      font-weight: 300;
+      strong{
+        font-weight: 600;
+      }
+    }
+    p{
+      color:$body-bg;
+    }
+  }
+}
+
+// Block backrest brand
+.block-backrest{
+  position:relative;
+  background:$body-bg;
+  text-align: center;
+  .brand-backrest{
+    display:inline-block;
+    margin:20px;
+    a{
+      float:left;
+      img{
+        height:70px;
+        width: auto;
+      }
+    }
+  }
+}
+
+// SUB BRAND
+.cont-subbrand{
+  width:250px;
+  @include border-radius(100%);
+  @include box-shadow(rgba($gray-base, 0.4) 0 10px 25px);
+  text-align:center;
+  line-height:200px;
+  background:$body-bg;
+  position:relative;
+  padding:0 0 250px 0;
+  display: inline-block;
+  img{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    width:70%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .cont-subbrand{
+    width:100%;
+    line-height:200px;
+    padding:0 0 100% 0;
+    img{
+      width:70%;
+      max-width: 200px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.center-bottom{
+  margin:auto;
+  position:absolute;
+  max-width: 220px;
+  max-height: 60px;
+  left:0;
+  right:0;
+  bottom:40px;
+  z-index: 200;
+}
+.center-center{
+  margin:auto;
+  position:absolute;
+  max-width: 220px;
+  max-height: 60px;
+  left:0;
+  right:0;
+  bottom:0px;
+  top:0px;
+  z-index: 200;
+}

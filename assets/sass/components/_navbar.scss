@@ -1,0 +1,198 @@
+header{
+  nav{
+    &.navbar{
+      @include background-image(linear-gradient(to right, $brand-third, $brand-primary));
+      border:none;
+      width: 100%;
+      .navbar-header{
+        .navbar-brand{
+          padding: 10px;
+          height:auto;
+          width:110px;
+        }
+      }
+      .mainbar{
+        margin:0;
+        ul.navbar-nav{
+          li{
+            a{
+              color:$body-bg;
+              padding:22px 10px;
+            }
+            &.dropdown{
+              .dropdown-menu{
+                background:transparentize($brand-third, 0.1);
+                li{
+                  a{
+                    padding:10px;
+                  }
+                }
+              }
+              &.open{
+                & > a{
+                  background:transparentize($brand-third, 0.1) !important;
+                }
+                a{
+                  color:$body-bg;
+                }
+              }
+            }
+            &:hover, &.active{
+              & > a{
+                background:rgba($gray-base, 0.3);
+                color:$body-bg;
+              }
+            }
+          }
+          .btn{
+            margin: 14px 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  &.alternative{
+    nav.navbar{
+      background:transparent;
+      border:none;
+      min-height: 0;
+      height: auto;
+      .navbar-header{
+        margin:20px 0;
+        .navbar-brand{
+          width:150px;
+        }
+      }
+      .mainbar{
+        margin:20px 0;
+        ul.navbar-nav{
+          margin-left:50px;
+          li{
+            a{
+              color:$body-bg;
+              font-weight: 500;
+              font-size: $font-size-base+2;
+            }
+            &.dropdown{
+              &.open{
+                & > a{
+                  color:$body-bg;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+@media screen and (max-width:990px){
+  header{
+    nav{
+      &.navbar{
+        .navbar-header{
+          width:100%;
+          margin:0px 0;
+          .navbar-brand{
+          }
+          .open-mainbar{
+            margin-top: 10px;
+          }
+        }
+        .mainbar{
+          position:absolute;
+          background-color: $brand-third;
+          top: 0;
+          right: -300px;
+          margin: 0 !important;
+          max-height: 100vh !important;
+          height: 100vh !important;
+          border:0;
+          width:300px;
+          padding:20px;
+          overflow-y:auto;
+          &.open{
+            right:0;
+          }
+          .cont-navbar{
+            margin-top:40px;
+          }
+          ul.navbar-nav{
+            margin:20px 0;
+            margin-left:0;
+            padding:0;
+            width:100%;
+            li{
+              width:100%;
+              a{
+                width:100%;
+                font-weight: 500;
+                font-size: $font-size-base+2;
+              }
+              ul.dropdown-menu{
+                position:relative;
+                width:100%;
+                @include box-shadow(none);
+                border:none;
+                margin:0;
+                li{
+                  background:rgba($gray-base, 0.3);
+                  a{
+                  }
+                }
+              }
+              &:hover, &.active{
+                & > a{
+                  background-color:rgba($gray-base, 0.3) !important;
+                  color:$body-bg;
+                }
+              }
+            }
+            &.navbar-right{
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    &.alternative{
+      nav.navbar{
+        .navbar-header{
+          .navbar-brand{
+          }
+        }
+        .mainbar{
+          ul.navbar-nav{
+            margin:20px 0;
+            width:100%;
+            margin-left:0;
+            padding:0;
+            li{
+              a{
+                font-weight: 500;
+                font-size: $font-size-base+2;
+              }
+              &.dropdown{
+                &.open{
+                  & > a{
+                  }
+                }
+              }
+              &:hover, &.active{
+                & > a{
+                  background-color:rgba($gray-base, 0.3);
+                  color:$body-bg;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

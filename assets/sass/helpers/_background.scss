@@ -1,0 +1,143 @@
+.helper-bg-light{
+  background:$gray-light;
+}
+
+.helper-bg-lighter{
+  background:$gray-lighter;
+}
+
+.gradient-blue{
+  &:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    //@include opacity(0.9);
+    @include background-image(linear-gradient(to right, $brand-third, transparentize($brand-primary, 0.2)));
+  }
+}
+
+.gradient-subbrand-line{
+  &:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    @include opacity(0.8);
+    @include background-image(linear-gradient(to right, transparentize($brand-primary, 0.2), $brand-third));
+  }
+  &.mate{
+    &:after{
+      @include opacity(1);
+    }
+  }
+}
+.gradient-subbrand-dots{
+  &:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include opacity(0.9);
+    z-index: 1;
+    @include background-image(linear-gradient(to right, #282262, transparentize(#eb008b, 0.2), transparentize(#f05a28, 0.2)));
+  }
+  &.mate{
+    &:after{
+      @include opacity(1);
+    }
+  }
+}
+
+
+.bg-image-grid-1{
+  background:url(http://placehold.it/450x450) repeat center center;
+  background-size: cover;
+  height: 50vh;
+}
+
+
+// Bacgrounds images
+.bg-image-1{
+  background:url('../images/pics/por-que-elegirnos-principal.jpg' ) no-repeat center center;
+  background-size: cover;
+}
+.bg-image-2{
+  background:url('../images/pics/programa-crossborder.jpg' ) no-repeat center center;
+  background-size: cover;
+}
+.bg-image-3{
+  background:url('../images/pics/line-principal.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-4{
+  background:url('../images/pics/line-1.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-5{
+  background:url('../images/pics/line-2.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-6{
+  background:url('../images/pics/line-3.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-7{
+  background:url('../images/pics/dots-3.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-8{
+  background:url('../images/pics/dots-principal.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-9{
+  background:url('../images/pics/dots-1.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-10{
+  background:url('../images/pics/dots-2.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-11{
+  background:url('../images/pics/dots-3.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-12{
+  background:url('../images/pics/dots-4.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-13{
+  background:url('../images/pics/desarrolladores.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-14{
+  background:url('../images/pics/nosotros-principal.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-15{
+  background:url('../images/pics/nosotros-1.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-16{
+  background:url('../images/pics/inquietudes.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-17{
+  background:url('../images/pics/programa-crossborder.jpg') no-repeat center center;
+  background-size: cover;
+}
+.bg-image-18{
+  background:url('../images/pics/privacidad.jpg') no-repeat center center;
+  background-size: cover;
+}

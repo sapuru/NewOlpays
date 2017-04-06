@@ -1,0 +1,55 @@
+.modal-backdrop {
+   background-color: $body-bg;
+}
+.modal{
+  .modal-dialog{
+    .modal-content{
+      @include border-radius(0px);
+      @include background-image(linear-gradient(to right, $brand-primary, $brand-third));
+      .modal-header{
+        border-bottom: none;
+      }
+      .modal-body{
+        label, h4, p{
+          color:$body-bg;
+        }
+        h4{
+          line-height: $font-size-h3;
+        }
+        hr{
+          background: $body-bg;
+          border:0;
+          height: 1px;
+          display:block;
+          width:70%;
+          margin:20px auto;
+          clear:both;
+        }
+        .access-products{
+          //display:none;
+          text-align: center;
+          padding:0 0 40px 0;
+          .cont-subbrand{
+            width:150px;
+            padding: 0 0 150px 0;
+            display: block;
+            margin: 20px auto;
+          }
+          // &.open{
+          //   display:block;
+          // }
+        }
+
+        // .form-sing-up{
+        //   &.close{
+        //     display:none;
+        //   }
+        // }
+      }
+      .modal-footer{
+        border-top: none;
+        text-align:center;
+      }
+    }
+  }
+}

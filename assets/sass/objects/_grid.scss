@@ -1,0 +1,37 @@
+.grid-line, .grid-dots{
+  min-height:50vh;
+  &.alternative{
+    h2, p{
+      color:$body-bg;
+    }
+  }
+  .col-md-6{
+    min-height:50vh;
+    .box{
+      padding:30px;
+    }
+  }
+}
+
+.grid-line{
+  &.alternative{
+    @include background-image(linear-gradient(to right, $brand-primary, $brand-third));
+  }
+}
+
+
+.grid-dots{
+  &.alternative{
+    @include background-image(linear-gradient(to right, #282262, #eb008b, #f05a28));
+  }
+}
+
+@media screen and (max-width: 768px){
+  .grid-line, .grid-dots{
+    .col-md-6{
+      .box{
+        padding:40px 5%;
+      }
+    }
+  }
+}
