@@ -74,8 +74,8 @@
             </div>
             <div class="row form-sign-up">
               <div class="col-md-10 col-md-offset-1">
-                <form action="https://live.olpays.com/admin/v1/admin/public/ticket" method="POST">
-                  <input type="hidden" name="formName" value="producto-dots">
+                <form>
+                  <input type="hidden" id="formName" value="producto-dots">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Nombre</label>
@@ -85,19 +85,19 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Sitio web</label>
-                      <input type="text" name="webpage" class="form-control">
+                      <input type="text" id="webpage" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Correo Electrónico</label>
-                      <input type="text" name="email" class="form-control">
+                      <input type="text" id="email" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Tipo de industria</label>
-                      <select name="typeIndustry" class="form-control">
+                      <select id="typeIndustry" class="form-control">
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                       </select>
@@ -106,13 +106,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Pa&iacute;s</label>
-                      <input type="text" name="country" class="form-control">
+                      <input type="text" id="country" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="">Elige un producto</label>
-                      <select name="product" class="form-control">
+                      <select id="product" class="form-control">
                         <option value="line">Line</option>
                         <option value="dots">Dots</option>
                       </select>
@@ -120,16 +120,16 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <div class="checkbox">
+                     <div class="checkbox">
                         <label>
-                          <input type="checkbox"> ¿Posee compa&ntilde;&iacute;a en Europa?
+                          <input type="checkbox" id="ukCompany"> ¿Posee compa&ntilde;&iacute;a en Europa?
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12 text-center">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">ENVIAR</button>
+                    <button type="button" class="btn btn-primary" id="sendForm">ENVIAR</button>
                   </div>
                 </form>
               </div>
@@ -138,6 +138,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- HEADER -->
     <header class="alternative">

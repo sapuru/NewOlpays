@@ -43,10 +43,41 @@ $('.close-mainbar').click(function(){
 //   $(".access-products").removeClass("open");
 //   $(".form-sing-up").removeClass("close");
 // })
+document.getElementById('sendForm').onclick = doPost;
+
 
 
 //$(document).ready(function(){
 //})
+function doPost() {
+  formName = document.getElementById('formName');
+  name = document.getElementById('name');
+  webpage = document.getElementById('webpage');
+  email = document.getElementById('email');
+  typeIndustry = document.getElementById('typeIndustry');
+  country = document.getElementById('country');
+  product = document.getElementById('product');
+  ukCompany = document.getElementById('ukCompany');
+
+  var body = {
+    formName:formName.value,
+    name:name.value,
+    webpage:webpage.value,
+    email:email.value,
+    typeIndustry:typeIndustry.value,
+    country:country.value,
+    product:product.value,
+    ukCompany:ukCompany ? ukCompany.checked : false
+  }
+  var url = 'https://live.olpays.com/admin/v1/admin/public/ticket';
+  //var url = 'http://localhost:8000/admin/v1/admin/public/ticket';
+
+  $.post( url, body, function (response) {
+      if(response.responseText != undefined){
+        alert('gracias! lo contactaremos');
+      }
+  });
+}
 
 $(document).on('show.bs.modal', function (event) {
     if (!event.relatedTarget) {
