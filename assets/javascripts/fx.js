@@ -72,10 +72,15 @@ function doPost() {
   var url = 'https://live.olpays.com/admin/v1/admin/public/ticket';
   //var url = 'http://localhost:8000/admin/v1/admin/public/ticket';
 
-  $.post( url, body, function (response) {
-      if(response.responseText != undefined){
-        alert('gracias! lo contactaremos');
-      }
+  $.ajax({
+  url:url,
+  type:"POST",
+  data:JSON.stringify(body),
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+  success: function(){
+    alert('gracias! lo contactaremos');
+  }
   });
 }
 
