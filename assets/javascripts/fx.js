@@ -73,14 +73,14 @@ function doPost() {
   //var url = 'http://localhost:8000/admin/v1/admin/public/ticket';
 
   $.ajax({
-  url:url,
-  type:"POST",
-  data:JSON.stringify(body),
-  contentType:"application/json; charset=utf-8",
-  dataType:"json",
-  success: function(){
-    alert('gracias! lo contactaremos');
-  }
+    url:url,
+    type:"POST",
+    data:JSON.stringify(body),
+    contentType:"application/json; charset=utf-8",
+    dataType:"json",
+    success: function(){
+      alert('gracias! lo contactaremos');
+    }
   });
 }
 
