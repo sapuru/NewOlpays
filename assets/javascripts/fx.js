@@ -80,6 +80,7 @@ function doPost() {
     dataType:"json",
     success: function(){
       alert('gracias! lo contactaremos');
+      $('button.close').click();
     }
   });
 }
