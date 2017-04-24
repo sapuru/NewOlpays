@@ -46,5 +46,15 @@ gulp.task('minify-js', () =>
 gulp.task('minify-img', () =>
     gulp.src('./assets/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images/'))
+        .pipe(gulp.dest('./dist/assets/images/'))
+);
+
+gulp.task('cp-fonts', () =>
+    gulp.src(['./assets/fonts/**/*'])
+    .pipe(gulp.dest('./dist/assets/fonts/'))
+);
+
+gulp.task('cp-icons', () =>
+    gulp.src(['./assets/icons/**/*'])
+    .pipe(gulp.dest('./dist/assets/icons/'))
 );
