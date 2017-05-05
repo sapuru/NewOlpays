@@ -98,8 +98,9 @@
                     <div class="form-group">
                       <label for="">Tipo de industria</label>
                       <select id="typeIndustry" class="form-control">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
+                        {{#industry}}
+                        <option> {{type}} </option>
+                        {{/industry}}
                       </select>
                     </div>
                   </div>
@@ -113,8 +114,9 @@
                     <div class="form-group">
                       <label for="">Elige un producto</label>
                       <select id="product" class="form-control">
-                        <option value="line">Line</option>
-                        <option value="dots">Dots</option>
+                        {{#product}}
+                        <option> {{type}} </option>
+                        {{/product}}                 
                       </select>
                     </div>
                   </div>
