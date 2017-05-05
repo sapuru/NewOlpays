@@ -1,4 +1,37 @@
 {
          "login_line": "https://stage.olpays.com/app#!/login" ,
-         "login_dots": "https://stage.olpays.com/Marketplace/#/login" 
+         "login_dots": "https://stage.olpays.com/Marketplace/#/login",
+         "industry": [
+             {"type":"Clothing‎"},
+             {"type":"Commercial item transport and distribution‎‎"},
+             {"type":"Computer"},
+             {"type":"Construction"},
+             {"type":"Cosmetic"},
+             {"type":"Death care‎‎"},
+             {"type":"Electronics"},
+             {"type":"Entertainment‎‎"},
+             {"type":"Fashion‎‎"},
+             {"type":"Food‎"},
+             {"type":"Healthcare"},
+             {"type":"Insurance‎‎"},
+             {"type":"Manufactured goods‎"},
+             {"type":"Mass surveillance‎‎"},
+             {"type":"Media"},
+             {"type":"Real estate‎‎"},
+             {"type":"Recycling‎‎"},
+             {"type":"Service industries‎‎"},
+             {"type":"Shipping‎‎"},
+             {"type":"Private spaceflight‎‎"},
+             {"type":"Sports business‎‎"},
+             {"type":"Stock market indices by industry‎"},
+             {"type":"Telecommunication"},
+             {"type":"Television‎‎"},
+             {"type":"Toy‎"},
+             {"type":"Transport‎"},
+             {"type":"Business of visual arts‎‎"},
+             {"type":"Waste‎‎"}],
+         "product": [
+             {"type":"LINE‎"},
+             {"type":"DOTS"}
+         ] 
 }
