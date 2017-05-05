@@ -4,7 +4,7 @@
   "description": "Olpays landing",
   "main": "index.js",
   "scripts": {
-    "build": "gulp render-mustache  && gulp minify-css && gulp minify-js && gulp minify-img && gulp cp-fonts && gulp cp-icons"
+    "build": "gulp render-mustache  && gulp minify-html && gulp minify-css && gulp minify-js && gulp minify-img && gulp cp-fonts && gulp cp-icons"
     },
   "repository": {
     "type": "git",

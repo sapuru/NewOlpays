@@ -1,7 +1,7 @@
 app:
-  mem_limit: 300m
+  mem_limit: 512m
   memswap_limit: 1g
   build: .
-  volumes:
-    - .:/home/nodejs/app
-    - /home/nodejs/app/node_modules
+  container_name: olpays-landing
+  ports:
+    - '7000:80'

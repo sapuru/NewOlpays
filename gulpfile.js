@@ -29,7 +29,6 @@ gulp.task('minify-html', () =>
     .pipe(minifyHtml())
     .pipe(gulp.dest('./dist'))
 );
-
  
 gulp.task('minify-css', () =>
     gulp.src('./assets/stylesheets/*.css') 
