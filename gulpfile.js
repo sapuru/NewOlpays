@@ -1,4 +1,4 @@
- "use strict";
+"use strict";
 
 /*
 * Enviroment parametrizable, Renderer, minifier
@@ -9,37 +9,53 @@
 * Franco Poveda (fpoveda[at]olpays.com) - [4/2017]
 */
 
-const gulp       = require('gulp'),
-      mustache   = require('gulp-mustache'),
-      minifyHtml = require("gulp-minify-html"),
-      minifyCss  = require("gulp-minify-css"),
-      uglify     = require("gulp-uglify"),
-      imagemin   = require('gulp-imagemin'),
-      config     = require('./config');
+const gulp = require('gulp'),
+    handlebars = require('handlebars'),
+    gulpHandlebars = require('gulp-handlebars-html')(handlebars), //default to require('handlebars') if not provided
+    // mustache   = require('gulp-mustache'),
+    minifyHtml = require("gulp-minify-html"),
+    minifyCss = require("gulp-minify-css"),
+    uglify = require("gulp-uglify"),
+    imagemin = require('gulp-imagemin'),
+    config = require('./config');
 
 
-gulp.task('render-mustache',() =>
+/*gulp.task('render-mustache', () =>
     gulp.src('templates/*')
         .pipe(mustache(config))
         .pipe(gulp.dest('./dist'))
-);
- 
+);*/
+
+
+gulp.task('render-hbs', function () {
+    var options = {
+        partialsDirectory: ['./templates/partials']
+    }
+
+    return gulp.src('templates/*.html')
+        .pipe(gulpHandlebars(config, options))
+        .pipe(gulp.dest('dist'));
+});
+
+
+
+
 gulp.task('minify-html', () =>
     gulp.src('./dist/*.html')
-    .pipe(minifyHtml())
-    .pipe(gulp.dest('./dist'))
+        .pipe(minifyHtml())
+        .pipe(gulp.dest('./dist'))
 );
- 
+
 gulp.task('minify-css', () =>
-    gulp.src('./assets/stylesheets/*.css') 
-    .pipe(minifyCss())
-    .pipe(gulp.dest('./dist/assets/stylesheets'))
+    gulp.src('./assets/stylesheets/*.css')
+        .pipe(minifyCss())
+        .pipe(gulp.dest('./dist/assets/stylesheets'))
 );
 
 gulp.task('minify-js', () =>
-    gulp.src('./assets/javascripts/**/*.js') 
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/assets/javascripts/'))
+    gulp.src('./assets/javascripts/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/assets/javascripts/'))
 );
 
 gulp.task('minify-img', () =>
@@ -50,10 +66,10 @@ gulp.task('minify-img', () =>
 
 gulp.task('cp-fonts', () =>
     gulp.src(['./assets/fonts/**/*'])
-    .pipe(gulp.dest('./dist/assets/fonts/'))
+        .pipe(gulp.dest('./dist/assets/fonts/'))
 );
 
 gulp.task('cp-icons', () =>
     gulp.src(['./assets/icons/**/*'])
-    .pipe(gulp.dest('./dist/assets/icons/'))
+        .pipe(gulp.dest('./dist/assets/icons/'))
 );
