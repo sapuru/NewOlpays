@@ -1,0 +1,81 @@
+    <!-- MODAL CONTACT -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalContact">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center padding-vertical-20">
+                <h4>Una vez que nos env&iacute;es tu consulta, nos comunicaremos contigo para <br> guiarte en el proceso de registro</h4>
+                <p>Para ello cu&eacute;ntanos brevemente acerca de tu empresa</p>
+              </div>
+            </div>
+            <div class="row form-sign-up">
+              <div class="col-md-10 col-md-offset-1">
+                <form>
+                  <input type="hidden" id="formName" value="contacto">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Nombre</label>
+                      <input type="text" name="name"class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Sitio web</label>
+                      <input type="text" id="webpage" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Correo Electrónico</label>
+                      <input type="text" id="email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Tipo de industria</label>
+                      <select id="typeIndustry" class="form-control">
+                        {{#industry}}
+                        <option> {{type}} </option>
+                        {{/industry}}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Pa&iacute;s</label>
+                      <input type="text" id="country" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Elige un producto</label>
+                      <select id="product" class="form-control">
+                        <option value="line">Line</option>
+                        <option value="dots">Dots</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                     <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="ukCompany"> ¿Posee compa&ntilde;&iacute;a en Europa?
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="sendForm">ENVIAR</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -4,8 +4,8 @@
   "description": "Olpays landing",
   "main": "index.js",
   "scripts": {
-    "build": "gulp render-mustache  && gulp minify-html && gulp minify-css && gulp minify-js && gulp minify-img && gulp cp-fonts && gulp cp-icons"
-    },
+    "build": "gulp render-hbs  && gulp minify-html && gulp minify-css && gulp minify-js && gulp minify-img && gulp cp-fonts && gulp cp-icons"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Olpays/landing.git"
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Olpays/landing#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-handlebars-html": "0.0.2",
     "gulp-imagemin": "^3.2.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",
