@@ -12,33 +12,20 @@
 const gulp = require('gulp'),
     handlebars = require('handlebars'),
     gulpHandlebars = require('gulp-handlebars-html')(handlebars), //default to require('handlebars') if not provided
-    // mustache   = require('gulp-mustache'),
     minifyHtml = require("gulp-minify-html"),
-    minifyCss = require("gulp-minify-css"),
+    minifyCss = require("gulp-clean-css"),
     uglify = require("gulp-uglify"),
     imagemin = require('gulp-imagemin'),
     config = require('./config');
-
-
-/*gulp.task('render-mustache', () =>
-    gulp.src('templates/*')
-        .pipe(mustache(config))
-        .pipe(gulp.dest('./dist'))
-);*/
-
 
 gulp.task('render-hbs', function () {
     var options = {
         partialsDirectory: ['./templates/partials']
     }
-
     return gulp.src('templates/*.html')
         .pipe(gulpHandlebars(config, options))
         .pipe(gulp.dest('dist'));
 });
-
-
-
 
 gulp.task('minify-html', () =>
     gulp.src('./dist/*.html')

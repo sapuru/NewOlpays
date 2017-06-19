@@ -5,3 +5,5 @@ app:
   container_name: olpays-landing
   ports:
     - '7000:80'
+  volumes:
+    - ./dist/:/usr/share/nginx/html/
