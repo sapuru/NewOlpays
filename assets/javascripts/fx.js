@@ -39,7 +39,7 @@ $('.close-mainbar').click(function(){
 //   $(".form-sing-up").addClass("close");
 // });
 
-// $('#modalAccess').on('hidden.bs.modal', function (event) {
+// $('#modalSigin').on('hidden.bs.modal', function (event) {
 //   $(".access-products").removeClass("open");
 //   $(".form-sing-up").removeClass("close");
 // })
