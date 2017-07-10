@@ -69,8 +69,8 @@ function doPost() {
     product:product.value,
     ukCompany:ukCompany ? ukCompany.checked : false
   }
-  var url = 'https://live.olpays.com/admin/v1/admin/public/ticket';
-  //var url = 'http://localhost:8000/admin/v1/admin/public/ticket';
+  var url = 'https://live.olpays.com/admin/admin/olp/ticket';
+  //var url = 'http://localhost:8000/admin/admin/olp/ticket';
 
   $.ajax({
     url:url,
@@ -99,5 +99,3 @@ $(document).on('shown.bs.modal', function (event) {
         $('body').addClass('modal-open');
     };
 });
-
-
