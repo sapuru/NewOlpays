@@ -1,0 +1,44 @@
+.badge-line {
+    --label-padding-x: 7px;
+    margin-left: 10px;
+    padding: 2px var(--label-padding-x);
+    font-size: 13px;
+    background: 0 0;
+    border: solid 1px #63d3ab;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #63d3ab;
+    font-weight: 600;
+    text-align: center;
+}
+
+.badge-dots{
+    --label-padding-x: 7px;
+    margin-left: 10px;
+    padding: 2px var(--label-padding-x);
+    font-size: 13px;
+    background: 0 0;
+    border: solid 1px #DE329D;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #DE329D;
+    font-weight: 150;
+    text-align: center;
+}
+
+.badge-product{
+    --label-padding-x: 7px;
+    margin-left: 10px;
+    padding: 2px var(--label-padding-x);
+    font-size: 13px;
+    background: 0 0;
+    border: solid 1px #63d3ab;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #63d3ab;
+    font-weight: 600;
+    text-align: center;
+}

@@ -3834,6 +3834,12 @@ output {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+
+.mensaje {
+  height: 100px!important;
+  resize:none;
+}
+
 /* line 57, ../../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .form-control:focus {
   border-color: #66afe9;
@@ -7761,6 +7767,12 @@ button.close {
   outline: 0;
 }
 
+.modal-succesfull {
+  width: 700px 
+}
+
+
+
 /* line 64, ../../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_modals.scss */
 .modal-backdrop {
   position: fixed;
@@ -8820,6 +8832,10 @@ button.close {
 /* line 1, ../sass/helpers/_paddings.scss */
 .padding-vertical-20 {
   padding: 20px 0;
+}
+
+.padding-bottom-20 {
+  padding: 0 0 20px 0;
 }
 
 /* line 4, ../sass/helpers/_paddings.scss */
