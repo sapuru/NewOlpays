@@ -1,31 +1,31 @@
 // Scroll
 $(window).scroll(function() {
-  var browserWidth = $(window).width();
-  var scroll = $(window).scrollTop();
-  //console.log(scroll);
-  if (browserWidth <= 990) {
-    if (scroll <= 0) {
-      $("header").addClass("alternative");
+    var browserWidth = $(window).width();
+    var scroll = $(window).scrollTop();
+    //console.log(scroll);
+    if (browserWidth <= 990) {
+        if (scroll <= 0) {
+            $("header").addClass("alternative");
+        } else {
+            $("header").removeClass("alternative");
+        }
     } else {
-      $("header").removeClass("alternative");
+        if (scroll <= 100) {
+            $("header").addClass("alternative");
+        } else {
+            $("header").removeClass("alternative");
+        }
     }
-  } else {
-    if (scroll <= 100) {
-      $("header").addClass("alternative");
-    } else {
-      $("header").removeClass("alternative");
-    }
-  }
 });
 
 // Sidebar
 $('.open-mainbar').click(function(){
-  $(".mainbar").addClass("open");
-  $("body").addClass("sidebar-opened");
+    $(".mainbar").addClass("open");
+    $("body").addClass("sidebar-opened");
 });
 $('.close-mainbar').click(function(){
-  $(".mainbar").removeClass("open");
-  $("body").removeClass("sidebar-opened");
+    $(".mainbar").removeClass("open");
+    $("body").removeClass("sidebar-opened");
 });
 
 // // Sing Up
@@ -50,39 +50,42 @@ document.getElementById('sendForm').onclick = doPost;
 //$(document).ready(function(){
 //})
 function doPost() {
-  formName = document.getElementById('formName');
-  name = document.getElementById('name');
-  webpage = document.getElementById('webpage');
-  email = document.getElementById('email');
-  typeIndustry = document.getElementById('typeIndustry');
-  country = document.getElementById('country');
-  product = document.getElementById('product');
-  ukCompany = document.getElementById('ukCompany');
 
-  var body = {
-    formName:formName.value,
-    name:name.value,
-    webpage:webpage.value,
-    email:email.value,
-    typeIndustry:typeIndustry.value,
-    country:country.value,
-    product:product.value,
-    ukCompany:ukCompany ? ukCompany.checked : false
-  }
-  var url = 'https://live.olpays.com/admin/admin/olp/ticket';
-  //var url = 'http://localhost:8000/admin/admin/olp/ticket';
+    const formName = document.getElementById('formName');
+    const name = document.getElementById('fantasyName');
+    const webpage = document.getElementById('webpage');
+    const email = document.getElementById('email');
+    const typeIndustry = document.getElementById('typeIndustry');
+    const country = document.getElementById('country');
+    const product = document.getElementById('product');
+    const ukCompany = document.getElementById('ukCompany');
 
-  $.ajax({
-    url:url,
-    type:"POST",
-    data:JSON.stringify(body),
-    contentType:"application/json; charset=utf-8",
-    dataType:"json",
-    success: function(){
-      alert('gracias! lo contactaremos');
-      $('button.close').click();
-    }
-  });
+    var body = {
+        formName:formName.value,
+        name:name.value,
+        webpage:webpage.value,
+        email:email.value,
+        typeIndustry:typeIndustry.value,
+        country:country.value,
+        product:product.value,
+        ukCompany:ukCompany ? ukCompany.checked : false
+    };
+
+    console.log(body);
+    // var url = 'https://live.olpays.com/admin/admin/olp/ticket';
+    var url = 'http://localhost:8001/admin/admin/olp/ticket';
+
+    $.ajax({
+        url:url,
+        type:"POST",
+        data:JSON.stringify(body),
+        contentType:"application/json; charset=utf-8",
+        dataType:"json",
+        success: function(){
+            alert('gracias! lo contactaremos');
+            $('button.close').click();
+        }
+    });
 }
 
 $(document).on('show.bs.modal', function (event) {
