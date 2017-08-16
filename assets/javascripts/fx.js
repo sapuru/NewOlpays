@@ -43,12 +43,7 @@ $('.close-mainbar').click(function(){
 //   $(".access-products").removeClass("open");
 //   $(".form-sing-up").removeClass("close");
 // })
-document.getElementById('sendForm').onclick = doPost;
 
-
-
-//$(document).ready(function(){
-//})
 function doPost() {
 
     const formName = document.getElementById('formName');
@@ -71,9 +66,8 @@ function doPost() {
         ukCompany:ukCompany ? ukCompany.checked : false
     };
 
-    console.log(body);
-    // var url = 'https://live.olpays.com/admin/admin/olp/ticket';
-    var url = 'http://localhost:8001/admin/admin/olp/ticket';
+    // var url = 'https://live.olpays.com/olp/ticket';
+    var url = 'http://localhost:8000/olp/ticket';
 
     $.ajax({
         url:url,

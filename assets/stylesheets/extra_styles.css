@@ -42,3 +42,8 @@
     font-weight: 600;
     text-align: center;
 }
+
+.error-message {
+    color: #DE329D !important;
+    font-weight: 400;
+}
