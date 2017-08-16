@@ -78,8 +78,18 @@ function doPost() {
         success: function(){
             alert('gracias! lo contactaremos');
             $('button.close').click();
+            resetContactForm();
         }
     });
+}
+
+function resetContactForm() {
+    document.getElementById('formName').value = "";
+    document.getElementById('fantasyName').value = "";
+    document.getElementById('webpage').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('country').value = "";
+    document.getElementById('ukCompany').checked = false;
 }
 
 $(document).on('show.bs.modal', function (event) {

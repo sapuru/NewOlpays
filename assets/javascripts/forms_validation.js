@@ -1,6 +1,6 @@
 $(document).ready(function(){
     /*Inicializa validador para el formulario contactForm*/
-    $("#contactForm").validate({
+    const contactForm = $("#contactForm").validate({
 
         errorClass: "error-message", // clase CSS que se usará en los mensajes de erro
 
@@ -36,5 +36,10 @@ $(document).ready(function(){
                 required: true
             }
         }
+    });
+
+    /*Limpio el formulario*/
+    $('#cancelContactFormButton').click(function(){
+        resetContactForm();
     });
 });
