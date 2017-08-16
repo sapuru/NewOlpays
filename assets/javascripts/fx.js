@@ -66,8 +66,8 @@ function doPost() {
         ukCompany:ukCompany ? ukCompany.checked : false
     };
 
-    // var url = 'https://live.olpays.com/olp/ticket';
-    var url = 'http://localhost:8000/olp/ticket';
+    var url = 'https://live.olpays.com/olp/ticket';
+    // var url = 'http://localhost:8000/olp/ticket';
 
     $.ajax({
         url:url,
