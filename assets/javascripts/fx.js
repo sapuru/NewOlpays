@@ -1,7 +1,15 @@
+const formName = document.getElementById('formName');
+const name = document.getElementById('fantasyName');
+const webpage = document.getElementById('webpage');
+const email = document.getElementById('email');
+const typeIndustry = document.getElementById('typeIndustry');
+const country = document.getElementById('country');
+const product = document.getElementById('product');
+const ukCompany = document.getElementById('ukCompany');
 // Scroll
 $(window).scroll(function() {
-    var browserWidth = $(window).width();
-    var scroll = $(window).scrollTop();
+    const browserWidth = $(window).width();
+    const scroll = $(window).scrollTop();
     //console.log(scroll);
     if (browserWidth <= 990) {
         if (scroll <= 0) {
@@ -46,16 +54,7 @@ $('.close-mainbar').click(function(){
 
 function doPost() {
 
-    const formName = document.getElementById('formName');
-    const name = document.getElementById('fantasyName');
-    const webpage = document.getElementById('webpage');
-    const email = document.getElementById('email');
-    const typeIndustry = document.getElementById('typeIndustry');
-    const country = document.getElementById('country');
-    const product = document.getElementById('product');
-    const ukCompany = document.getElementById('ukCompany');
-
-    var body = {
+    const body = {
         formName:formName.value,
         name:name.value,
         webpage:webpage.value,
@@ -66,8 +65,8 @@ function doPost() {
         ukCompany:ukCompany ? ukCompany.checked : false
     };
 
-    var url = 'https://live.olpays.com/olp/ticket';
-    // var url = 'http://localhost:8000/olp/ticket';
+    const url = 'https://live.olpays.com/olp/ticket';
+    // const url = 'http://localhost:8000/olp/ticket';
 
     $.ajax({
         url:url,
@@ -84,12 +83,12 @@ function doPost() {
 }
 
 function resetContactForm() {
-    document.getElementById('formName').value = "";
-    document.getElementById('fantasyName').value = "";
-    document.getElementById('webpage').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('country').value = "";
-    document.getElementById('ukCompany').checked = false;
+    formName.value = "";
+    fantasyName.value = "";
+    webpage.value = "";
+    email.value = "";
+    country.value = "";
+    ukCompany.checked = false;
 }
 
 $(document).on('show.bs.modal', function (event) {
