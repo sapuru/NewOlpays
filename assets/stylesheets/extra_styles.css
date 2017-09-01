@@ -47,3 +47,7 @@
     color: #DE329D !important;
     font-weight: 400;
 }
+
+button.close{
+    z-index: 11!important;
+}
