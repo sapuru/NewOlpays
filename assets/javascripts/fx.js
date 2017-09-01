@@ -75,20 +75,24 @@ function doPost() {
         contentType:"application/json; charset=utf-8",
         dataType:"json",
         success: function(){
-            alert('gracias! lo contactaremos');
-            $('button.close').click();
-            resetContactForm();
+            $("#accessFormSection").attr("hidden", true);
+            $("#successfulMessageSection").attr("hidden", false);
         }
     });
 }
 
 function resetContactForm() {
-    formName.value = "";
     fantasyName.value = "";
     webpage.value = "";
     email.value = "";
     country.value = "";
     ukCompany.checked = false;
+}
+
+function resetContanctFormDisplay() {
+    $("#accessFormSection").attr("hidden", false);
+    $("#successfulMessageSection").attr("hidden", true);
+    resetContactForm();
 }
 
 $(document).on('show.bs.modal', function (event) {

@@ -38,8 +38,4 @@ $(document).ready(function(){
         }
     });
 
-    /*Limpio el formulario*/
-    $('#cancelContactFormButton').click(function(){
-        resetContactForm();
-    });
 });
