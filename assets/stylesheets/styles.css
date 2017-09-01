@@ -8940,109 +8940,109 @@ button.close {
 
 /* line 72, ../sass/helpers/_background.scss */
 .bg-image-1 {
-  background: url("../images/pics/por-que-elegirnos-principal.jpg") no-repeat center center;
+  background: url("../images/pics/por-que-elegirnos-principal.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 76, ../sass/helpers/_background.scss */
 .bg-image-2 {
-  background: url("../images/pics/programa-crossborder.jpg") no-repeat center center;
+  background: url("../images/pics/programa-crossborder.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 80, ../sass/helpers/_background.scss */
 .bg-image-3 {
-  background: url("../images/pics/line-principal.jpg") no-repeat center center;
+  background: url("../images/pics/line-principal.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 84, ../sass/helpers/_background.scss */
 .bg-image-4 {
-  background: url("../images/pics/line-1.jpg") no-repeat center center;
+  background: url("../images/pics/line-1.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 88, ../sass/helpers/_background.scss */
 .bg-image-5 {
-  background: url("../images/pics/line-2.jpg") no-repeat center center;
+  background: url("../images/pics/line-2.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 92, ../sass/helpers/_background.scss */
 .bg-image-6 {
-  background: url("../images/pics/line-3.jpg") no-repeat center center;
+  background: url("../images/pics/line-3.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 96, ../sass/helpers/_background.scss */
 .bg-image-7 {
-  background: url("../images/pics/dots-3.jpg") no-repeat center center;
+  background: url("../images/pics/dots-3.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 100, ../sass/helpers/_background.scss */
 .bg-image-8 {
-  background: url("../images/pics/dots-principal.jpg") no-repeat center center;
+  background: url("../images/pics/dots-principal.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 104, ../sass/helpers/_background.scss */
 .bg-image-9 {
-  background: url("../images/pics/dots-1.jpg") no-repeat center center;
+  background: url("../images/pics/dots-1.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 108, ../sass/helpers/_background.scss */
 .bg-image-10 {
-  background: url("../images/pics/dots-2.jpg") no-repeat center center;
+  background: url("../images/pics/dots-2.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 112, ../sass/helpers/_background.scss */
 .bg-image-11 {
-  background: url("../images/pics/dots-3.jpg") no-repeat center center;
+  background: url("../images/pics/dots-3.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 116, ../sass/helpers/_background.scss */
 .bg-image-12 {
-  background: url("../images/pics/dots-4.jpg") no-repeat center center;
+  background: url("../images/pics/dots-4.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 120, ../sass/helpers/_background.scss */
 .bg-image-13 {
-  background: url("../images/pics/desarrolladores.jpg") no-repeat center center;
+  background: url("../images/pics/desarrolladores.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 124, ../sass/helpers/_background.scss */
 .bg-image-14 {
-  background: url("../images/pics/nosotros-principal.jpg") no-repeat center center;
+  background: url("../images/pics/nosotros-principal.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 128, ../sass/helpers/_background.scss */
 .bg-image-15 {
-  background: url("../images/pics/team.jpg") no-repeat center center;
+  background: url("../images/pics/team.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 132, ../sass/helpers/_background.scss */
 .bg-image-16 {
-  background: url("../images/pics/inquietudes.jpg") no-repeat center center;
+  background: url("../images/pics/inquietudes.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 136, ../sass/helpers/_background.scss */
 .bg-image-17 {
-  background: url("../images/pics/programa-crossborder.jpg") no-repeat center center;
+  background: url("../images/pics/programa-crossborder.webp") no-repeat center center;
   background-size: cover;
 }
 
 /* line 140, ../sass/helpers/_background.scss */
 .bg-image-18 {
-  background: url("../images/pics/privacidad.jpg") no-repeat center center;
+  background: url("../images/pics/privacidad.webp") no-repeat center center;
   background-size: cover;
 }
 
@@ -9089,7 +9089,7 @@ html body.sidebar-opened {
 /* line 1, ../sass/elements/_footer.scss */
 footer {
   padding: 40px 0 0 0;
-  background: url("../images/pics/footer.jpg") no-repeat right top;
+  background: url("../images/pics/footer.webp") no-repeat right top;
   background-size: cover;
   position: relative;
 }
