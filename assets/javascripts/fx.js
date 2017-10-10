@@ -6,6 +6,7 @@ const typeIndustry = document.getElementById('typeIndustry');
 const country = document.getElementById('country');
 const product = document.getElementById('product');
 const ukCompany = document.getElementById('ukCompany');
+
 // Scroll
 $(window).scroll(function() {
     const browserWidth = $(window).width();
@@ -74,9 +75,20 @@ function doPost() {
         data:JSON.stringify(body),
         contentType:"application/json; charset=utf-8",
         dataType:"json",
-        success: function(){
-            $("#accessFormSection").attr("hidden", true);
-            $("#successfulMessageSection").attr("hidden", false);
+        success: function() {
+            const header = "Tu solicitud ha sido enviada correctamente.";
+            const message = "Nuestro equipo se pondrá en contacto contigo lo más pronto posible.";
+            toastr.options.closeButton = true;
+            toastr.success(message, header);
+            $('#modalAccess').modal('toggle');
+            resetContactForm();
+
+        },
+        error: function () {
+            const header = "Lo sentimos.";
+            const message = "Algo salió mal, por favor intente más tarde.";
+            toastr.options.closeButton = true;
+            toastr.error(message, header)
         }
     });
 }
@@ -90,8 +102,6 @@ function resetContactForm() {
 }
 
 function resetContanctFormDisplay() {
-    $("#accessFormSection").attr("hidden", false);
-    $("#successfulMessageSection").attr("hidden", true);
     resetContactForm();
 }
 
