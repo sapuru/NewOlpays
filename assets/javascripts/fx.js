@@ -77,7 +77,7 @@ function doPost() {
         dataType:"json",
         success: function() {
             const header = "Tu solicitud ha sido enviada correctamente.";
-            const message = "Nuestro equipo se pondrá en contacto contigo lo más pronto posible.";
+            const message = "Nuestro equipo se contactará en la brevedad.";
             toastr.options.closeButton = true;
             toastr.success(message, header);
             $('#modalAccess').modal('toggle');
@@ -86,7 +86,8 @@ function doPost() {
         },
         error: function () {
             const header = "Lo sentimos.";
-            const message = "Algo salió mal, por favor intente más tarde.";
+            const message = "Tenemos algunos inconvenientes en este momento. Contáctenos a " +
+                "info@olpays.com con su consulta. Gracias";
             toastr.options.closeButton = true;
             toastr.error(message, header)
         }
