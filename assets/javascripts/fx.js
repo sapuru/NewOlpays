@@ -6,6 +6,7 @@ const typeIndustry = document.getElementById('typeIndustry');
 const country = document.getElementById('country');
 const product = document.getElementById('product');
 const ukCompany = document.getElementById('ukCompany');
+
 // Scroll
 $(window).scroll(function() {
     const browserWidth = $(window).width();
@@ -74,9 +75,21 @@ function doPost() {
         data:JSON.stringify(body),
         contentType:"application/json; charset=utf-8",
         dataType:"json",
-        success: function(){
-            $("#accessFormSection").attr("hidden", true);
-            $("#successfulMessageSection").attr("hidden", false);
+        success: function() {
+            const header = "Tu solicitud ha sido enviada correctamente.";
+            const message = "Nuestro equipo se contactará en la brevedad.";
+            toastr.options.closeButton = true;
+            toastr.success(message, header);
+            $('#modalAccess').modal('toggle');
+            resetContactForm();
+
+        },
+        error: function () {
+            const header = "Lo sentimos.";
+            const message = "Tenemos algunos inconvenientes en este momento. Contáctenos a " +
+                "info@olpays.com con su consulta. Gracias";
+            toastr.options.closeButton = true;
+            toastr.error(message, header)
         }
     });
 }
@@ -89,23 +102,17 @@ function resetContactForm() {
     ukCompany.checked = false;
 }
 
-function resetContanctFormDisplay() {
-    $("#accessFormSection").attr("hidden", false);
-    $("#successfulMessageSection").attr("hidden", true);
-    resetContactForm();
-}
-
 $(document).on('show.bs.modal', function (event) {
     if (!event.relatedTarget) {
         $('.modal').not(event.target).modal('hide');
-    };
+    }
     if ($(event.relatedTarget).parents('.modal').length > 0) {
         $(event.relatedTarget).parents('.modal').modal('hide');
-    };
+    }
 });
 
 $(document).on('shown.bs.modal', function (event) {
     if ($('body').hasClass('modal-open') == false) {
         $('body').addClass('modal-open');
-    };
+    }
 });

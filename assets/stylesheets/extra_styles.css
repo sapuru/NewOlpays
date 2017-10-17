@@ -51,3 +51,15 @@
 button.close{
     z-index: 11!important;
 }
+
+#toast-container > .toast {
+    background-image: none !important;
+}
+
+#toast-container>div {
+    width: 400px;
+}
+
+.toast-success {
+    background-color: #1e92c8;
+}
