@@ -102,10 +102,6 @@ function resetContactForm() {
     ukCompany.checked = false;
 }
 
-function resetContanctFormDisplay() {
-    resetContactForm();
-}
-
 $(document).on('show.bs.modal', function (event) {
     if (!event.relatedTarget) {
         $('.modal').not(event.target).modal('hide');
